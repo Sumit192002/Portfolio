@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit Padiyar | Linux Administrator & DevOps Engineer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Sumit Padiyar, a Linux Administrator and DevOps Engineer with RHCE & RHCSA certifications, specializing in AWS, Jenkins, Prometheus, Grafana, Ansible, and Docker.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Grid overlay animation -->
+    <div class="grid-overlay"></div>
+    <div class="scanline"></div>
+
+    <!-- Navigation Header -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <span class="terminal-prompt">$</span>
+                <span class="logo-text">sumit.padiyar<span class="blink">_</span></span>
+            </div>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#about" class="nav-item active" id="nav-about">About</a>
+                <a href="#skills" class="nav-item" id="nav-skills">Skills</a>
+                <a href="#experience" class="nav-item" id="nav-experience">Experience</a>
+                <a href="#projects" class="nav-item" id="nav-projects">Projects</a>
+                <a href="#certifications" class="nav-item" id="nav-certifications">Certifications</a>
+                <a href="#contact" class="nav-item" id="nav-contact">Contact</a>
+            </nav>
+
+            <div class="header-status">
+                <div class="status-indicator">
+                    <span class="pulse-dot green"></span>
+                    <span class="status-label">SYS_STATUS: ACTIVE</span>
+                </div>
+                <div class="uptime-pill">
+                    <i class="fa-solid fa-clock"></i> Uptime: <span id="uptime-counter">00d 00h 00m 00s</span>
+                </div>
+            </div>
+
+            <!-- Hamburger menu for mobile -->
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+        <a href="#about" class="mobile-nav-item">About</a>
+        <a href="#skills" class="mobile-nav-item">Skills</a>
+        <a href="#experience" class="mobile-nav-item">Experience</a>
+        <a href="#projects" class="mobile-nav-item">Projects</a>
+        <a href="#certifications" class="mobile-nav-item">Certifications</a>
+        <a href="#contact" class="mobile-nav-item">Contact</a>
+    </div>
+
+    <main class="main-content">
+        <!-- Section: Hero & Live Monitoring Dashboard -->
+        <section id="about" class="hero-section">
+            <div class="section-container hero-grid">
+                <!-- Left: Bio & Quick Terminal Profile -->
+                <div class="hero-bio-panel">
+                    <div class="console-badge">SYSTEM OPERATOR PROFILE</div>
+                    <h1 class="hero-title">Sumit Padiyar</h1>
+                    <h2 class="hero-subtitle">Linux Administrator & DevOps Engineer</h2>
+
+                    <p class="hero-description">
+                        Linux Systems Specialist and DevOps practitioner with <strong>1.8+ years of production
+                            experience</strong>. Dedicated to building robust, highly scalable, and available server
+                        environments. Certified Red Hat Engineer (RHCE) with hands-on expertise in automated container
+                        orchestration, continuous integration, and real-time monitoring solutions.
+                    </p>
+
+                    <div class="certifications-quick-list">
+                        <span class="cert-pill"><i class="fa-solid fa-certificate"></i> RHCE</span>
+                        <span class="cert-pill"><i class="fa-solid fa-certificate"></i> RHCSA</span>
+                        <span class="cert-pill"><i class="fa-brands fa-aws"></i> AWS Cloud Foundations</span>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Contact
+                            Console</a>
+                        <a href="#terminal" class="btn btn-secondary"><i class="fa-solid fa-terminal"></i> Initialize
+                            CLI</a>
+                    </div>
+
+                    <div class="personal-info-grid">
+                        <div class="info-item">
+                            <span class="info-key">LOC</span>
+                            <span class="info-val">Bengaluru, KA, India</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-key">EMAIL</span>
+                            <span class="info-val"><a
+                                    href="mailto:Sumit.Anand@infobellit.com">Sumit.Anand@infobellit.com</a></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-key">SHELL</span>
+                            <span class="info-val">/bin/bash</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-key">NODE</span>
+                            <span class="info-val">aws-ap-south-1a</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive DevOps Monitor Dashboard -->
+                <div class="hero-dashboard-panel">
+                    <div class="panel-header">
+                        <div class="panel-title-area">
+                            <span class="panel-icon"><i class="fa-solid fa-chart-line"></i></span>
+                            <span class="panel-title">Infrastructure Telemetry Dashboard</span>
+                        </div>
+                        <div class="panel-controls">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                    </div>
+                    <div class="panel-body dashboard-grid">
+                        <!-- Stat Card 1 -->
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-title">CPU UTILIZATION</span>
+                                <span class="stat-value text-cyan" id="cpu-val">24.5%</span>
+                            </div>
+                            <div class="stat-chart-container">
+                                <canvas id="cpu-chart" class="mini-chart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Stat Card 2 -->
+                        <div class="stat-card">
+                            <div class="stat-header">
+                                <span class="stat-title">MEM CONG (16GB)</span>
+                                <span class="stat-value text-emerald" id="mem-val">42.1%</span>
+                            </div>
+                            <div class="stat-chart-container">
+                                <canvas id="mem-chart" class="mini-chart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Stat Card 3 -->
+                        <div class="stat-card full-width">
+                            <div class="stat-header">
+                                <span class="stat-title">NETWORK I/O (BPS)</span>
+                                <span class="stat-value text-amber" id="net-val">128.4 KB/s</span>
+                            </div>
+                            <div class="stat-chart-container">
+                                <canvas id="net-chart" class="mini-chart"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- System Specs mini-grid -->
+                        <div class="specs-mini-grid">
+                            <div class="spec-tile">
+                                <div class="tile-icon"><i class="fa-solid fa-server"></i></div>
+                                <div class="tile-details">
+                                    <div class="tile-label">DEPLOYED SERVICES</div>
+                                    <div class="tile-value">Nginx, Prometheus</div>
+                                </div>
+                            </div>
+                            <div class="spec-tile">
+                                <div class="tile-icon"><i class="fa-brands fa-docker"></i></div>
+                                <div class="tile-details">
+                                    <div class="tile-label">CONTAINERS RUNNING</div>
+                                    <div class="tile-value">12 / 12 Healthy</div>
+                                </div>
+                            </div>
+                            <div class="spec-tile">
+                                <div class="tile-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                                <div class="tile-details">
+                                    <div class="tile-label">FIREWALL Hardening</div>
+                                    <div class="tile-value">Active (iptables)</div>
+                                </div>
+                            </div>
+                            <div class="spec-tile">
+                                <div class="tile-icon"><i class="fa-solid fa-chart-pie"></i></div>
+                                <div class="tile-details">
+                                    <div class="tile-label">AVG LOG PROCESSING</div>
+                                    <div class="tile-value">~10,000 req/day</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Interactive Terminal Emulator -->
+        <section id="terminal" class="terminal-section">
+            <div class="section-container">
+                <div class="section-header-centered">
+                    <h2 class="section-title">Interactive Terminal Console</h2>
+                    <p class="section-subtitle">Type standard Linux/DevOps commands to inspect my credentials
+                        dynamically.</p>
+                </div>
+
+                <div class="terminal-wrapper">
+                    <div class="terminal-header">
+                        <div class="terminal-header-title">
+                            <i class="fa-solid fa-terminal"></i> sumit@padiyar-server: ~ (bash)
+                        </div>
+                        <div class="terminal-actions">
+                            <span class="action-btn minimize"><i class="fa-solid fa-minus"></i></span>
+                            <span class="action-btn expand"><i class="fa-solid fa-expand"></i></span>
+                            <span class="action-btn close"><i class="fa-solid fa-xmark"></i></span>
+                        </div>
+                    </div>
+                    <div class="terminal-body" id="terminal-body">
+                        <div class="terminal-welcome">
+                            <p>Welcome to Sumit Padiyar's Interactive Profile Terminal. [Version 2.4.0-LTS]</p>
+                            <p>System authorization status: GRANTED. Session initialized.</p>
+                            <p class="helper-text">Type <span class="cmd-text">help</span> to list all available custom
+                                console commands, or click them to execute:
+                                <span class="quick-cmd" onclick="executeQuickCmd('neofetch')">neofetch</span>,
+                                <span class="quick-cmd" onclick="executeQuickCmd('skills')">skills</span>,
+                                <span class="quick-cmd" onclick="executeQuickCmd('experience')">experience</span>,
+                                <span class="quick-cmd" onclick="executeQuickCmd('projects')">projects</span>,
+                                <span class="quick-cmd" onclick="executeQuickCmd('clear')">clear</span>.
+                            </p>
+                        </div>
+                        <div id="terminal-output"></div>
+                        <div class="terminal-input-line">
+                            <span class="prompt-user">sumit@padiyar-server:~$</span>
+                            <input type="text" id="terminal-input" autocomplete="off" autofocus
+                                aria-label="Terminal Command Input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Skills Matrix -->
+        <section id="skills" class="skills-section">
+            <div class="section-container">
+                <div class="section-header-centered">
+                    <h2 class="section-title">Technical Skill Matrix</h2>
+                    <p class="section-subtitle">Categorized cloud architecture, system administration, and workflow
+                        automation competencies.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Operating Systems -->
+                    <div class="skills-card">
+                        <div class="card-icon-header">
+                            <i class="fa-solid fa-microchip"></i>
+                            <h3>Operating Systems</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li><span class="bullet-indicator"></span> RHEL (Red Hat Enterprise Linux)</li>
+                            <li><span class="bullet-indicator"></span> CentOS</li>
+                            <li><span class="bullet-indicator"></span> Ubuntu Server</li>
+                            <li><span class="bullet-indicator"></span> Amazon Linux</li>
+                            <li><span class="bullet-indicator"></span> WSL (Windows Subsystem for Linux)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Cloud & Virtualization -->
+                    <div class="skills-card">
+                        <div class="card-icon-header">
+                            <i class="fa-solid fa-cloud"></i>
+                            <h3>Cloud & Virtualization</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li><span class="bullet-indicator"></span> AWS (EC2, S3, VPC, IAM)</li>
+                            <li><span class="bullet-indicator"></span> CloudWatch Monitoring</li>
+                            <li><span class="bullet-indicator"></span> VMware ESXi & Workstation</li>
+                        </ul>
+                    </div>
+
+                    <!-- DevOps & CI/CD -->
+                    <div class="skills-card">
+                        <div class="card-icon-header">
+                            <i class="fa-solid fa-code-merge"></i>
+                            <h3>DevOps & CI/CD</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li><span class="bullet-indicator"></span> Jenkins Pipelines (Declarative/Scripted)</li>
+                            <li><span class="bullet-indicator"></span> Ansible Playbooks & Automation</li>
+                            <li><span class="bullet-indicator"></span> Docker Containerization</li>
+                            <li><span class="bullet-indicator"></span> Git & GitHub Version Control</li>
+                        </ul>
+                    </div>
+
+                    <!-- Monitoring & Logging -->
+                    <div class="skills-card">
+                        <div class="card-icon-header">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            <h3>Monitoring & Logging</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li><span class="bullet-indicator"></span> Prometheus Metrics Storage</li>
+                            <li><span class="bullet-indicator"></span> Grafana Dashboard Visualization</li>
+                            <li><span class="bullet-indicator"></span> Node Exporter (Infrastructure scraping)</li>
+                            <li><span class="bullet-indicator"></span> AWS CloudWatch Logs & Metrics</li>
+                        </ul>
+                    </div>
+
+                    <!-- Web Servers -->
+                    <div class="skills-card">
+                        <div class="card-icon-header">
+                            <i class="fa-solid fa-globe"></i>
+                            <h3>Web Servers</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li><span class="bullet-indicator"></span> Nginx (Reverse Proxy, Load Balancer)</li>
+                            <li><span class="bullet-indicator"></span> Apache HTTP Server (HTTPD)</li>
+                            <li><span class="bullet-indicator"></span> Zimbra Mail Server Administration</li>
+                        </ul>
+                    </div>
+
+                    <!-- Scripting -->
+                    <div class="skills-card">
+                        <div class="card-icon-header">
+                            <i class="fa-solid fa-file-code"></i>
+                            <h3>Automation Scripting</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li><span class="bullet-indicator"></span> Bash Scripting (Automation)</li>
+                            <li><span class="bullet-indicator"></span> Shell Task Automation</li>
+                            <li><span class="bullet-indicator"></span> Cron Job Scheduling & Auditing</li>
+                        </ul>
+                    </div>
+
+                    <!-- Security & Networking -->
+                    <div class="skills-card full-width-card">
+                        <div class="card-icon-header">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <h3>Security & Networking</h3>
+                        </div>
+                        <div class="skills-sub-grid">
+                            <ul class="skills-list">
+                                <li><span class="bullet-indicator"></span> Firewalld & iptables Rules Configuration</li>
+                                <li><span class="bullet-indicator"></span> SELinux Enforcing policies</li>
+                                <li><span class="bullet-indicator"></span> VPN Deployments</li>
+                            </ul>
+                            <ul class="skills-list">
+                                <li><span class="bullet-indicator"></span> DNS Bind, DHCP Configurations</li>
+                                <li><span class="bullet-indicator"></span> TCP/IP Protocol Suite, CIDR, Subnetting</li>
+                                <li><span class="bullet-indicator"></span> System Hardening & SLA Compliance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Professional Experience -->
+        <section id="experience" class="experience-section">
+            <div class="section-container">
+                <div class="section-header-centered">
+                    <h2 class="section-title">Professional Experience</h2>
+                    <p class="section-subtitle">Chronological record of production infrastructure management and
+                        engineering impact.</p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Current Position -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot pulse"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header-info">
+                                <span class="job-duration">April 2026 – Present</span>
+                                <h3 class="company-name">Infobell IT</h3>
+                                <h4 class="job-title">Linux/Cloud</h4>
+                                <span class="job-location"><i class="fa-solid fa-location-dot"></i> Belgaum, Karnataka,
+                                    India</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p class="role-summary">Focusing on high-availability Linux infrastructure operations,
+                                    automation scripting, and continuous delivery pipelines supporting mission-critical
+                                    development teams.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Previous Position -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header-info">
+                                <span class="job-duration">September 2024 – April 2026</span>
+                                <h3 class="company-name">Aforeserve.Com Ltd</h3>
+                                <h4 class="job-title">Linux Administrator</h4>
+                                <span class="job-location"><i class="fa-solid fa-location-dot"></i> Belgaum, Karnataka,
+                                    India</span>
+                            </div>
+                            <div class="timeline-body">
+                                <ul class="impact-list">
+                                    <li><i class="fa-solid fa-check text-cyan"></i> <strong>High Availability:</strong>
+                                        Maintained critical DO EDMS server infrastructure for a large regional user
+                                        base, ensuring <strong>99.9% uptime</strong> through proactive monitoring and
+                                        rapid incident response.</li>
+                                    <li><i class="fa-solid fa-check text-cyan"></i> <strong>Workflow
+                                            Automation:</strong> Automated batch processing workflows using shell
+                                        scripts and cron jobs, <strong>reducing manual intervention by 70%</strong> and
+                                        improving operational efficiency.</li>
+                                    <li><i class="fa-solid fa-check text-cyan"></i> <strong>Monitoring &
+                                            Alerting:</strong> Implemented comprehensive monitoring solutions using
+                                        Prometheus and Grafana, enabling real-time performance tracking and predictive
+                                        maintenance.</li>
+                                    <li><i class="fa-solid fa-check text-cyan"></i> <strong>Resource
+                                            Optimization:</strong> Optimized server performance by identifying and
+                                        resolving bottlenecks, achieving <strong>40% improvement in resource
+                                            utilization</strong> for high-load environments.</li>
+                                    <li><i class="fa-solid fa-check text-cyan"></i> <strong>Disaster Recovery:</strong>
+                                        Established robust backup and disaster recovery procedures using rsync and tar,
+                                        ensuring zero data loss across all critical systems.</li>
+                                    <li><i class="fa-solid fa-check text-cyan"></i> <strong>Security Hardening:</strong>
+                                        Configured and hardened firewall rules and security protocols (iptables,
+                                        Firewalld), <strong>reducing security vulnerabilities by 60%</strong> while
+                                        maintaining compliance with SLAs.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Internship -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header-info">
+                                <span class="job-duration">January 2024 – June 2024</span>
+                                <h3 class="company-name">Prodevans Technologies</h3>
+                                <h4 class="job-title">DevOps Intern</h4>
+                                <span class="job-location"><i class="fa-solid fa-location-dot"></i> Bengaluru,
+                                    Karnataka, India</span>
+                            </div>
+                            <div class="timeline-body">
+                                <ul class="impact-list">
+                                    <li><i class="fa-solid fa-check text-cyan"></i> Deployed and managed web services
+                                        including Apache and Nginx on Linux servers, handling <strong>10,000+ daily
+                                            requests</strong>.</li>
+                                    <li><i class="fa-solid fa-check text-cyan"></i> Automated system administration
+                                        tasks using Bash scripts and Ansible playbooks, <strong>reducing deployment time
+                                            by 60%</strong>.</li>
+                                    <li><i class="fa-solid fa-check text-cyan"></i> Configured and maintained Zimbra
+                                        mail server infrastructure monitored via Prometheus and Grafana dashboards.</li>
+                                    <li><i class="fa-solid fa-check text-cyan"></i> Implemented network configurations,
+                                        firewall rules, and security hardening across multiple Linux environments.</li>
+                                    <li><i class="fa-solid fa-check text-cyan"></i> Managed AWS cloud infrastructure
+                                        including EC2 instances, S3 storage, VPC networking, and IAM access controls.
+                                    </li>
+                                    <li><i class="fa-solid fa-check text-cyan"></i> Performed system backup, recovery,
+                                        and performance optimization using monitoring tools.</li>
+                                    <li><i class="fa-solid fa-check text-cyan"></i> Collaborated with development teams
+                                        to troubleshoot and resolve hardware/software issues in production environments.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Projects -->
+        <section id="projects" class="projects-section">
+            <div class="section-container">
+                <div class="section-header-centered">
+                    <h2 class="section-title">Projects Portfolio</h2>
+                    <p class="section-subtitle">Real-world deployment configurations, pipelines, and monitoring
+                        architectures built by Sumit.</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-banner text-cyan">
+                            <div class="project-tags">
+                                <span class="tag">Prometheus</span>
+                                <span class="tag">Grafana</span>
+                                <span class="tag">Node Exporter</span>
+                            </div>
+                            <div class="project-icon-box"><i class="fa-solid fa-gauge-high"></i></div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Linux Server Monitoring with Grafana & Prometheus</h3>
+                            <p class="project-text">
+                                Designed and implemented a monitoring solution for a Linux (WSL Ubuntu) server using
+                                Prometheus, Node Exporter, and Grafana, enabling real-time system metrics visualization.
+                            </p>
+                            <ul class="project-bullet-details">
+                                <li>Reduced manual system inspection by <strong>70%</strong> through automated alerting
+                                    and dashboard insights.</li>
+                                <li>Tracked key metrics: CPU usage, memory consumption, disk I/O, and network
+                                    activities.</li>
+                                <li>Gained hands-on experience in visualizing infrastructure health.</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                                    class="btn-project"><i class="fa-brands fa-github"></i> Repository</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-banner bg-blue">
+                            <div class="project-tags">
+                                <span class="tag">Jenkins</span>
+                                <span class="tag">Docker</span>
+                                <span class="tag">GitHub</span>
+                                <span class="tag">NGINX</span>
+                            </div>
+                            <div class="project-icon-box"><i class="fa-solid fa-code-commit"></i></div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Jenkins CI/CD for NGINX Deployment</h3>
+                            <p class="project-text">
+                                Developed a CI/CD pipeline for automated deployment of NGINX containers using Docker and
+                                Jenkins, integrating automatic code updates and checks.
+                            </p>
+                            <ul class="project-bullet-details">
+                                <li>Integrated GitHub webhook triggers for automated code deployment cycles.</li>
+                                <li>Engineered pipelines with build, test, and containerized deployment stages.</li>
+                                <li>Gained practical exposure to containerized DevOps environments.</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer"
+                                    class="btn-project"><i class="fa-brands fa-github"></i> Repository</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Certifications & Education -->
+        <section id="certifications" class="certifications-section">
+            <div class="section-container certifications-grid">
+                <!-- Certifications Area -->
+                <div class="certs-list-area">
+                    <h2 class="section-title text-left">Certifications</h2>
+                    <p class="section-subtitle text-left">Professional industry validations in Linux administration and
+                        Cloud infrastructure.</p>
+
+                    <div class="badges-container">
+                        <!-- RHCE -->
+                        <div class="badge-card">
+                            <div class="badge-icon-wrap red-gradient">
+                                <i class="fa-solid fa-gem"></i>
+                            </div>
+                            <div class="badge-details">
+                                <h3>Red Hat Certified Engineer (RHCE)</h3>
+                                <p class="issuer">Red Hat — Credly Verified</p>
+                                <a href="https://www.credly.com" target="_blank" rel="noopener" class="verify-link"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i> Verify Credential</a>
+                            </div>
+                        </div>
+
+                        <!-- RHCSA -->
+                        <div class="badge-card">
+                            <div class="badge-icon-wrap red-gradient">
+                                <i class="fa-solid fa-shield"></i>
+                            </div>
+                            <div class="badge-details">
+                                <h3>Red Hat Certified System Administrator (RHCSA)</h3>
+                                <p class="issuer">Red Hat — Credly Verified</p>
+                                <a href="https://www.credly.com" target="_blank" rel="noopener" class="verify-link"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i> Verify Credential</a>
+                            </div>
+                        </div>
+
+                        <!-- AWS Foundations -->
+                        <div class="badge-card">
+                            <div class="badge-icon-wrap aws-gradient">
+                                <i class="fa-brands fa-aws"></i>
+                            </div>
+                            <div class="badge-details">
+                                <h3>AWS Academy Graduate</h3>
+                                <p class="issuer">AWS Academy Cloud Foundations — Credly Verified</p>
+                                <a href="https://www.credly.com" target="_blank" rel="noopener" class="verify-link"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i> Verify Credential</a>
+                            </div>
+                        </div>
+
+                        <!-- DevOps with AWS -->
+                        <div class="badge-card">
+                            <div class="badge-icon-wrap green-gradient">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </div>
+                            <div class="badge-details">
+                                <h3>DevOps with AWS</h3>
+                                <p class="issuer">NareshIT — Course Certified</p>
+                                <span class="cert-static-tag"><i class="fa-solid fa-circle-check"></i> Completed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Area -->
+                <div class="education-area">
+                    <h2 class="section-title text-left">Academic Credentials</h2>
+                    <p class="section-subtitle text-left">Academic background in Computer Science & Information
+                        Technology.</p>
+
+                    <div class="education-list">
+                        <!-- RIT -->
+                        <div class="edu-card">
+                            <span class="edu-year">2020 – 2024</span>
+                            <h3>Bachelor of Technology (B.Tech)</h3>
+                            <h4>Computer Science and Information Technology</h4>
+                            <p class="edu-inst">Rajarambapu Institute of Technology</p>
+                            <p class="edu-loc">Sangli, Maharashtra, India</p>
+                        </div>
+
+                        <!-- Manere Junior College -->
+                        <div class="edu-card">
+                            <span class="edu-year">2019 – 2020</span>
+                            <h3>Higher Secondary Certificate (HSC)</h3>
+                            <h4>Science & Mathematics</h4>
+                            <p class="edu-inst">Manere Junior College</p>
+                            <p class="edu-loc">Ichalkaranji, Maharashtra, India</p>
+                        </div>
+
+                        <!-- High School -->
+                        <div class="edu-card">
+                            <span class="edu-year">2018 – 2019</span>
+                            <h3>Secondary School Certificate (SSC)</h3>
+                            <p class="edu-inst">DKTE High School</p>
+                            <p class="edu-loc">Ichalkaranji, Maharashtra, India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section: Contact Console -->
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <div class="section-header-centered">
+                    <h2 class="section-title">Establish Secure Connection</h2>
+                    <p class="section-subtitle">Send a packet to Sumit's terminal mailbox. Initializing SMTP
+                        tunneling...</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Terminal Panel -->
+                    <div class="contact-form-panel">
+                        <div class="form-console-header">
+                            <span class="console-light green"></span>
+                            <span class="console-label">SECURE_MAIL_GATEWAY // port-25</span>
+                        </div>
+                        <form id="contact-form" class="console-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">SENDER_NAME:</label>
+                                    <input type="text" id="name" required placeholder="Guest Operator">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">SENDER_EMAIL:</label>
+                                    <input type="email" id="email" required placeholder="guest@domain.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">SUBJECT_HEADER:</label>
+                                <input type="text" id="subject" placeholder="Infrastructure Deployment Opportunity">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">MESSAGE_BODY:</label>
+                                <textarea id="message" required rows="5"
+                                    placeholder="Enter message packets here..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-submit" id="btn-submit">
+                                <i class="fa-solid fa-paper-plane"></i> TRANSMIT_PACKET
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Connection Log Feedback Console -->
+                    <div class="contact-logs-panel">
+                        <div class="panel-header">
+                            <span class="panel-title">Mail Gateway Console Logger</span>
+                            <span class="log-indicator" id="log-indicator"><i class="fa-solid fa-circle"></i>
+                                IDLE</span>
+                        </div>
+                        <div class="panel-body log-screen" id="log-screen">
+                            <p class="log-line text-dim">[SYSTEM] Ready to send. Awaiting user input packet.</p>
+                            <p class="log-line text-dim">[SYSTEM] Target Address: Sumit.Anand@infobellit.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="footer-container">
+            <p class="copyright-text">&copy; 2026 Sumit Padiyar. Hosted on Nginx & Docker. SLA: 99.9% Uptime.</p>
+            <div class="footer-links">
+                <a href="mailto:Sumit.Anand@infobellit.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+                        class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
